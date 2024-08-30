@@ -6,7 +6,7 @@ cmake_minimum_required (VERSION 3.18)
 project(
   OpusEnc
   VERSION 0.12
-  DESCRIPTION "Add-on for libopus to decode a single OPUS stream inside an .opus or .ogg file"
+  DESCRIPTION "Add-on for libopus to encode audio data into the Opus codec and file format"
 )
 
 # This sets a bunch of compile flags and defined ${NUCLEX_COMPILER_TAG} to
@@ -60,27 +60,25 @@ endif()
 
 # -------------------------------------------------------------------------------------------------
 
-#configure_file(
-#  "${PROJECT_SOURCE_DIR}/config.h"
-#  "${PROJECT_SOURCE_DIR}/build/config.h"
-#  COPYONLY
-#)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/config.h"
+  "${PROJECT_SOURCE_DIR}/build/src/config.h"
+  COPYONLY
+)
 
 # -------------------------------------------------------------------------------------------------
 
 set(
   sourceFiles
-  "build/src/info.c"
-  "build/src/stream.c"
+  "build/src/resample.c"
+  "build/src/opus_header.c"
+  "build/src/picture.c"
+  "build/src/unicode_support.c"
   "build/src/opusenc.c"
-  "build/src/http.c"
-  "build/src/wincerts.c"
-  "build/src/internal.c"
+  "build/src/ogg_packer.c"
 )
 set(
   headerFiles
-  "build/src/internal.h"
-  "build/src/winerrno.h"
   "build/include/opusenc.h"
 )
 
@@ -91,7 +89,10 @@ add_library(OpusEnc::Static ALIAS OpusEnc)
 
 target_compile_definitions(
   OpusEnc
+  PUBLIC OUTSIDE_SPEEX
+  PUBLIC RANDOM_PREFIX=private_
   PRIVATE OPUSENC_BUILD
+  PRIVATE HAVE_CONFIG_H
 )
 
 target_include_directories(
