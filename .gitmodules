@@ -1,0 +1,5 @@
+[submodule "build"]
+	path = build
+	url = ../../xiph/libopusenc.git
+	branch = master
+	update = rebase
