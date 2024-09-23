@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Documents">
+      <UniqueIdentifier>{41f93295-bbce-4d4c-b942-4515c11b357d}</UniqueIdentifier>
+      <Extensions>md;txt;pdf</Extensions>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build\src\arch.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="build\src\config.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="build\src\ogg_packer.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="build\src\opus_header.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="build\src\picture.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="build\src\resample_sse.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="build\src\speex_resampler.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="build\src\unicode_support.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="build\include\opusenc.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="build\src\ogg_packer.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="build\src\opus_header.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="build\src\opusenc.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="build\src\picture.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="build\src\resample.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="build\src\unicode_support.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
